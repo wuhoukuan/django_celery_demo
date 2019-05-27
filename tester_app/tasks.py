@@ -4,9 +4,9 @@ from django.conf import settings
 
 @task(bind=True, queue=settings.HIGH_PRIORITY_QUEUE)
 def tester_task_1(self):
-    print self
-    print 'only a simply function'
+
+    print ('only a simply function')
 
 @task()
 def tester_task_2():
-    print 'also a simply function'
+    print('also a simply function')
